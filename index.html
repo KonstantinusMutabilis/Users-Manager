@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Manager</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div class="Manager">
+        <h1>Users Manager</h1>
+        <!-----------------REGISTER------------------>
+        <div class="register">
+            <h2>Register</h2>
+            <p>Register new user: fill the fields below</p>
+            <form class="fieldsline">
+                <div class="field">
+                    <label for="name">First Name</label>
+                    <input type="text" class="text-field" id="regname" name="name">
+                </div>
+
+                <div class="field">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="text-field" id="reglastname" name="lastname">
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" class="text-field" id="regemail" name="email">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" class="text-field" id="regpword" name="password">
+                </div>
+
+                <button type="submit" class="btn" id="reg">Submit</button>
+            </form>
+
+            <p id="regsting"></p>
+
+        </div>
+
+        <!----------------------LOGIN-------------------->
+
+        <div class="login">
+            <h2>Login</h2>
+            <p>Login: fill the fields below</p>
+            <form class="fieldsline loggedOut">
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" class="text-field" id="logemail" name="email">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" class="text-field" id="logpword" name="password">
+                </div>
+
+                <button type="submit" class="btn" id="log">LogIn</button>
+
+
+
+            </form>
+
+            <form class="fieldsline loggedIn" style="display: none;">
+
+                <button type="submit" class="btn" id="logOut">LogOut</button>
+
+            </form>
+
+            <p id="logstring"></p>
+
+        </div>
+
+        <!-------------------------MODAL-------------------------->
+
+
+        <div class="modal" id="modal">
+
+
+            <form class="editFields">
+                <div class="field">
+                    <label for="name">First Name</label>
+                    <input type="text" class="text-field" id="editname" name="name">
+                </div>
+
+                <div class="field">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="text-field" id="editlastname" name="lastname">
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" class="text-field" id="editemail" name="email">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" class="text-field" id="editpword" name="password">
+                </div>
+
+                <button type="submit" class="btn" id="editbtn">Submit</button>
+
+                <p id="editsting"></p>
+
+            </form>
+
+        </div>
+
+
+
+
+        <!----------------------LIST-------------------->
+
+
+
+        <div class="list">
+            <h2>Users list</h2>
+
+            <table id="tbl-users" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody id="usersTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <script src="./script.js"></script>
+</body>
+
+</html>

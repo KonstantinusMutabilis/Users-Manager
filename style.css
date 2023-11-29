@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(15, 64, 138);
+}
+
+h1 {
+    text-align: center;
+}
+
+.Manager,
+.register,
+.login,
+.list,
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.register,
+.login,
+.list {
+    gap: 20px;
+    padding: 30px;
+    font-size: 1.15rem;
+}
+
+
+.fieldsline {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.Manager {
+    padding: 20px 0 20px 0;
+    background-color: rgb(236, 236, 236);
+    gap: 80px;
+
+}
+
+.login {
+    background-color: white;
+}
+
+.login .text-field {
+    background-color: rgb(236, 236, 236);
+
+}
+
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(122, 122, 122, 0.267);
+}
+
+.editFields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 40vw;
+    max-height: 40vh;
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 50px;
+}
+
+
+
+
+.text-field {
+    height: 30px;
+    border: none;
+}
+
+
+
+.btn {
+    height: 30px;
+    width: 100px;
+    border: none;
+    align-self: flex-end;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    background: rgb(226, 141, 242);
+    background: linear-gradient(47deg, rgba(226, 141, 242, 1) 0%, rgba(105, 215, 235, 1) 100%);
+}
+
+.editbtn,
+.delbtn {
+
+    align-self: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: rgb(15, 64, 138);
+}
+
+
+.editbtn:disabled,
+.delbtn:disabled {
+    color: rgba(101, 126, 163, 0.466);
+}
+
+#tbl-users {
+    width: 70vw;
+    text-align: center;
+}
+
+#usersTableBody {
+    background-color: white;
+}

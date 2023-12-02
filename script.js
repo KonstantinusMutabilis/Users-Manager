@@ -198,7 +198,7 @@ LoginButton.addEventListener("click", function logUser(event) {
             var login = new Array();
             login.push(userArray[UserIndex].id, userArray[UserIndex].firstName, userArray[UserIndex].password, logged, loggedAdmin)
 
-            localStorage.setItem("login", JSON.stringify(login));
+            sessionStorage.setItem("login", JSON.stringify(login));
 
             logCheck();
         }
@@ -227,7 +227,7 @@ LogoutButton.addEventListener("click", function logOutUser(event) {
 
     userArray = JSON.parse(localStorage.getItem("UsersList"));
 
-    localStorage.removeItem("login");
+    sessionStorage.removeItem("login");
 
     logCheck();
     showUsersTable();
@@ -246,7 +246,7 @@ function showUsersTable() {
 
     if (localStorage.getItem("UsersList")) {
         var UsersData = JSON.parse(localStorage.getItem("UsersList"));
-        if (localStorage.getItem("login")) {
+        if (sessionStorage.getItem("login")) {
             LoggedData = JSON.parse(localStorage.getItem("login"));
         }
 
@@ -465,8 +465,8 @@ function logCheck() {
     var LoggedData = new Array();
     var logString = document.getElementById('logstring');
 
-    if (localStorage.getItem("login")) {
-        LoggedData = JSON.parse(localStorage.getItem("login"));
+    if (sessionStorage.getItem("login")) {
+        LoggedData = JSON.parse(sessionStorage.getItem("login"));
 
 
 
@@ -485,10 +485,10 @@ function logCheck() {
                 LoggedData[1] = LoggedUser.firstName;
 
 
-                localStorage.setItem("login", JSON.stringify(LoggedData));
+                sessionStorage.setItem("login", JSON.stringify(LoggedData));
             }
             else if (LoggedData[2] != userArray[loguserindex].password) {
-                localStorage.removeItem("login");
+                sessionStorage.removeItem("login");
                 document.querySelector(".loggedOut").style.display = "flex";
                 document.querySelector(".loggedIn").style.display = "none";
                 logged = false;
